@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce8vlo4nqn6ym"]
+
+[ext_resource type="Script" path="res://script/qian.gd" id="1_mbqbe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mijry"]
+size = Vector2(1170, 10)
+
+[node name="qian" type="Area2D"]
+script = ExtResource("1_mbqbe")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(575, -5)
+shape = SubResource("RectangleShape2D_mijry")

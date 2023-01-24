@@ -1,0 +1,48 @@
+[gd_scene load_steps=10 format=3 uid="uid://6sjs30ql4xf7"]
+
+[ext_resource type="PackedScene" uid="uid://cctqm45mra3mw" path="res://scene/middle_line.tscn" id="1_oqxw8"]
+[ext_resource type="PackedScene" uid="uid://dhtfpmooqau58" path="res://scene/ball.tscn" id="2_hxksy"]
+[ext_resource type="PackedScene" uid="uid://ce8vlo4nqn6ym" path="res://scene/qian.tscn" id="3_77kko"]
+[ext_resource type="PackedScene" uid="uid://de06p86rth34t" path="res://scene/player_1.tscn" id="4_ya0th"]
+[ext_resource type="PackedScene" uid="uid://w10ltomi3j4" path="res://scene/player_2.tscn" id="5_dqtqv"]
+[ext_resource type="Script" path="res://script/qian2.gd" id="6_4uyer"]
+[ext_resource type="PackedScene" uid="uid://stlwt1bqo1j" path="res://scene/Score.tscn" id="7_uy3ey"]
+[ext_resource type="PackedScene" uid="uid://b2blt8s6kxcgm" path="res://scene/wall.tscn" id="8_j2ou3"]
+[ext_resource type="PackedScene" uid="uid://dtbhc3jxoqh8f" path="res://scene/wall2.tscn" id="9_d3r2o"]
+
+[node name="main_scene" type="Node2D"]
+
+[node name="bgcolor" type="ColorRect" parent="."]
+offset_right = 1166.0
+offset_bottom = 657.0
+color = Color(0.380392, 0.509804, 0.819608, 0.886275)
+
+[node name="middle_line" parent="." instance=ExtResource("1_oqxw8")]
+
+[node name="line" parent="middle_line" index="0"]
+position = Vector2(576, 326)
+scale = Vector2(1, 5.125)
+
+[node name="ball" parent="." instance=ExtResource("2_hxksy")]
+position = Vector2(580, 336)
+
+[node name="player1" parent="." instance=ExtResource("4_ya0th")]
+position = Vector2(1096, 112)
+
+[node name="player2" parent="." instance=ExtResource("5_dqtqv")]
+position = Vector2(70, 200)
+
+[node name="qian2" parent="." instance=ExtResource("3_77kko")]
+script = ExtResource("6_4uyer")
+
+[node name="qian" parent="." instance=ExtResource("3_77kko")]
+position = Vector2(8, 657)
+
+[node name="score" parent="." instance=ExtResource("7_uy3ey")]
+
+[node name="Area2D" parent="." instance=ExtResource("8_j2ou3")]
+
+[node name="Area2D2" parent="." instance=ExtResource("9_d3r2o")]
+
+[editable path="middle_line"]
+[editable path="qian2"]
