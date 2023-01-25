@@ -1,15 +1,9 @@
-res://scene/Score.tscn
 res://scene/main_scene.tscn
 res://scene/ball.tscn
 res://scene/middle_line.tscn
 res://scene/player_2.tscn
 res://scene/player_1.tscn
 res://scene/qian.tscn
-res://scene/ball_go.gd
-res://scene/player2.gd
-res://scene/player1.gd
-res://scene/wall.gd
+res://scene/Score.tscn
 res://scene/wall.tscn
-res://scene/wall2.gd
 res://scene/wall2.tscn
-res://script/ball_go.gd
